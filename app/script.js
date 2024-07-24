@@ -12,6 +12,7 @@ function show() {
   console.log(radioEl);
   const pEl = document.querySelectorAll('p');
   console.log(pEl);
+  const selectEl = document.querySelectorAll('#my-select option');
 
   for (let i = 0; i < radioEl.length; i += 1) {
     const element = i;
@@ -28,5 +29,12 @@ function show() {
     console.log(randomColor);
     pEl[i].style.color = `#${randomColor}`;
     btnRef.style.backgroundColor = `#${randomColor}`;
+  }
+
+  // console.log(selectEl);
+  for (let i = 0; i < selectEl.length; i += 1) {
+    if (selectEl[i].selected) {
+      console.log(selectEl[i].value);
+    }
   }
 }
